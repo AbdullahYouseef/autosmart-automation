@@ -3,28 +3,19 @@
 A 4-page static website: `index.html` (Home), `services.html`, `about.html`, `contact.html`.
 No build tools needed — plain HTML/CSS/JS. Open `index.html` in any browser to preview.
 
-## Adding your real logo
+## Logo files
 
-Right now the site uses a small placeholder SVG mark + text as the logo (in the header and footer of every page). Once you have your two logo files:
+Your logo is already wired in across all four pages. Here's what's in `assets/img/` and where each one is used:
 
-1. Put them here:
-   - `assets/img/logo-dark.png`  → the version that works on a **light** background (used in the header)
-   - `assets/img/logo-light.png` → the version that works on a **dark** background (used in the footer, and in the header if you switch the header to a dark bar)
-2. In each HTML file, find this block inside `<header class="site-header">`:
-   ```html
-   <a href="index.html" class="logo">
-     <svg class="logo-mark" ...>...</svg>
-     <span>AutoSmart<br><small>Automation</small></span>
-   </a>
-   ```
-   Replace it with:
-   ```html
-   <a href="index.html" class="logo">
-     <img src="assets/img/logo-dark.png" alt="AutoSmart Automation" class="logo-img">
-   </a>
-   ```
-3. Do the same in the `<footer>` block using `logo-light.png`.
-4. If your logo's proportions are very different from a square, adjust `.logo-img { height: 34px; }` in `css/style.css` if it looks too big/small.
+| File | Used where | Notes |
+|---|---|---|
+| `logo-full.png` | Header (all pages) | Icon + wordmark, original green/black, transparent background |
+| `logo-full-brass.png` | Footer (all pages) | Same lockup, recolored to the brass accent so it reads on the dark teal footer |
+| `logo-icon.png` | — (spare) | Icon mark only, original color, transparent background |
+| `logo-icon-brass.png` | — (spare) | Icon mark only, brass color, transparent background |
+| `favicon.png` | Browser tab icon (all pages) | Icon mark only |
+
+If you get new or updated logo files later, just replace these filenames with your new versions (keep the same names) and every page updates automatically — no HTML edits needed. If a new logo's proportions are very different, you may need to tweak `.logo-img { height: 38px; }` and `.footer-logo img.logo-img { height: 30px; }` in `css/style.css`.
 
 ## Making the contact form actually send emails
 
