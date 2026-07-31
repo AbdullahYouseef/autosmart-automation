@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact — AutoSmart Automation</title>
+<meta name="description" content="Book a free smart home consultation with AutoSmart Automation. Tell us about your home and we'll get back to you within one business day.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="assets/img/favicon.png">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <nav class="nav">
+    <a href="index.html" class="logo">
+      <img src="assets/img/logo-full.png" alt="AutoSmart Automation" class="logo-img">
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html" class="active">Contact</a></li>
+    </ul>
+    <div class="nav-right">
+      <a href="contact.html" class="btn btn-outline">Get a Quote</a>
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+</header>
+
+<section class="page-hero">
+  <div class="container">
+    <p class="breadcrumb"><a href="index.html">Home</a> / Contact</p>
+    <h1>Let's talk about your home</h1>
+    <p>Fill out the form and we'll follow up within one business day to schedule a free on-site consultation.</p>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="grid-2" style="align-items: start;">
+      <form id="contact-form">
+        <div class="form-field">
+          <label for="name">Full name</label>
+          <input type="text" id="name" name="name" required>
+        </div>
+        <div class="form-field">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+        <div class="form-field">
+          <label for="phone">Phone</label>
+          <input type="tel" id="phone" name="phone">
+        </div>
+        <div class="form-field">
+          <label for="interest">What are you interested in?</label>
+          <select id="interest" name="interest">
+            <option>Lighting Control</option>
+            <option>Security &amp; Access</option>
+            <option>Climate Automation</option>
+            <option>Entertainment &amp; Audio</option>
+            <option>Energy Management</option>
+            <option>Not sure yet</option>
+          </select>
+        </div>
+        <div class="form-field">
+          <label for="message">Tell us about your home</label>
+          <textarea id="message" name="message" placeholder="Home size, number of rooms, what's frustrating you about it today..."></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Send Message</button>
+        <p id="form-status" style="display:none; margin-top: 16px; font-size: 0.9rem; color: var(--teal-800);"></p>
+        <p class="form-note">Note: this form isn't connected to an inbox yet — see the setup note in the README for how to wire it to Formspree, Netlify Forms, or your own backend.</p>
+      </form>
+
+      <div class="card" style="background: var(--teal-800); border: none; padding: 40px; color: var(--paper);">
+        <h3 style="color: var(--paper);">Direct contact</h3>
+        <ul class="contact-info-list">
+          <li>
+            <span class="label">Email</span>
+            <a href="mailto:hello@autosmartautomation.com">hello@autosmartautomation.com</a>
+          </li>
+          <li>
+            <span class="label">Phone</span>
+            <a href="tel:+10000000000">+1 (000) 000-0000</a>
+          </li>
+          <li>
+            <span class="label">Service Area</span>
+            <span>Add your city / region here</span>
+          </li>
+          <li>
+            <span class="label">Hours</span>
+            <span>Mon–Fri, 8am–6pm</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-logo">
+          <img src="assets/img/logo-full-brass.png" alt="AutoSmart Automation" class="logo-img">
+        </div>
+        <p style="color: rgba(246,244,239,0.6); font-size: 0.9rem; max-width: 32ch;">Smart home automation, designed and installed by people who live with what they build.</p>
+      </div>
+      <div>
+        <h4>Site</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Services</h4>
+        <ul>
+          <li><a href="services.html#lighting">Lighting</a></li>
+          <li><a href="services.html#security">Security</a></li>
+          <li><a href="services.html#climate">Climate</a></li>
+          <li><a href="services.html#entertainment">Entertainment</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="mailto:hello@autosmartautomation.com">hello@autosmartautomation.com</a></li>
+          <li><a href="tel:+10000000000">+1 (000) 000-0000</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span id="year"></span> AutoSmart Automation. All rights reserved.</span>
+      <span>Built for smarter homes.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>
